@@ -32,9 +32,4 @@ The backend server acts as a bridge between the client interface and the ChatGPT
 
 Users access the system through a user-friendly interface, which can be a web application or a mobile app. This interface allows users to enter queries and engage in chat conversations.
 
-## Usage
 
-1. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/stock-market-chat.git
