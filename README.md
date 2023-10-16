@@ -1,4 +1,4 @@
-# Stock Market Chat Assistant
+# Stock Market with ChatGpt
 
 This project combines web scraping, data storage, and the OpenAI ChatGPT API to create a chat-based interface for accessing stock market data.
 
@@ -31,5 +31,7 @@ The backend server acts as a bridge between the client interface and the ChatGPT
 ### 4. Client Interface
 
 Users access the system through a user-friendly interface, which can be a web application or a mobile app. This interface allows users to enter queries and engage in chat conversations.
+
+![ddd drawio](https://github.com/hotzan0301/stockmarket/assets/59554674/00730b11-2af1-4e0c-9cbd-9f0abdcab757)
 
 
