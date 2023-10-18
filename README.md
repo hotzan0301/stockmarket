@@ -24,8 +24,12 @@ This comprehensive project encompasses a range of functionalities, including web
 ## Components
 
 ### 1. Web Crawler
+For web crawling, we employed multiple Lambda functions to gather stock information. Specifically, we collected stock summary and company profiles for the top 100 companies in terms of market capitalization within each of the 11 sectors through Yahoo Finance. To expedite the process, we utilized a total of 33 Lambda functions, distributing them across the sectors, with three Lambda functions dedicated to each sector.
 
-The web crawler is responsible for collecting stock market data from various sources, such as financial news websites and stock exchange websites. It stores this data in a suitable format, such as a database, for easy retrieval.
+To maintain efficiency and timeliness, we implemented a scheduling system using Apache Airflow. This scheduling system enabled web crawling at 30-minute intervals, commencing at the opening of the U.S. stock market and concluding at its closure. The orchestration of these 33 Lambda functions was managed through AWS Step Functions.
+
+All the collected data is meticulously stored in CSV format within AWS S3 for easy access and future analysis.
+
 
 ### 2. ChatGPT API
 
