@@ -13,13 +13,9 @@ This comprehensive project encompasses a range of functionalities, including web
 
 - **Web Crawler**: An automated web crawler using AWS Lambda gathers stock market data from Yahoo Finance and stores it in an AWS S3 bucket.
 
+- **Backend Server**: The AWS EC2-based backend server manages web-crawled data from Lambda functions, storing it in an EC2-hosted MySQL database. It utilizes Django to serve data, acting as an intermediary for client interactions with the ChatGPT API, handling requests, and processing queries.
+
 - **ChatGPT API**: The system integrates with the OpenAI ChatGPT API, allowing users to send queries and receive AI-generated responses.
-
-- **Backend Server**: A backend server application acts as an intermediary between the client and the ChatGPT API. It receives user queries, fetches relevant data from the crawler's database, sends the query to the ChatGPT API, and returns the AI-generated response to the client.
-
-- **Client Interface**: A user-friendly web or mobile interface allows users to enter queries and engage in chat-based conversations. The interface communicates with the backend server to send queries and display responses.
-
-- **Query Processing**: The backend server processes user queries to understand intent and extract relevant information. It retrieves stock market data from the crawler's database based on user queries.
 
 ## Components
 
