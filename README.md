@@ -16,7 +16,7 @@ This comprehensive project encompasses a range of functionalities, including web
 
 - **ChatGPT API**: The system integrates with the OpenAI ChatGPT API, allowing users to send queries and receive AI-generated responses.
 
-## Arichitecture
+## Architecture
 
 ![ddd drawio](https://github.com/hotzan0301/stockmarket/assets/59554674/00730b11-2af1-4e0c-9cbd-9f0abdcab757)
 
