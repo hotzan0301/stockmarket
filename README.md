@@ -1,6 +1,16 @@
 # Stock Market with ChatGpt
 
-This project combines web scraping, data storage, and the OpenAI ChatGPT API to create a chat-based interface for accessing stock market data.
+There are many stock information websites and apps in the market, so accessing stock market information has become easier and faster than the past.
+Anyone can easily navigate websites like Yahoo Finance. However, when newcomers enter such websites, they might get stuck wondering where to start.
+For instance, just looking up information on well-known companies like Apple can be quite confusing.
+Even for experienced users, setting up to compare and anlayze stock information for various companies can be time-consuming.
+
+Thanks to the advancement of natural language processing models like ChatGPT, we can see cases of improved user experiences applied in various fields.
+If ChatGPT were to be applied to a stock information app, it could potentially make it more user-friendly, allowing many people to find stock information
+more easily and quickly.
+
+This project encompasees web scraping, data storage, work scheduling and orcherstration, web server hosting and web application using AWS cloud service.
+Addtionally, a chat-based interface for users to interact with the stock information database using ChatGPT has been implemented.
 
 ## Overview
 
