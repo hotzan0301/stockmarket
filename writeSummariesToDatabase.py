@@ -17,6 +17,7 @@ HOST = 'HOST_NAME'
 USER = 'USER_NAME'
 PASSWORD = 'YOUR PASSWORD'
 
+# Read CSV files and returns a dataframe
 def getSummariesDataFrame():
     s3 = boto3.client('s3')
     combined_df = pd.DataFrame()
@@ -27,6 +28,8 @@ def getSummariesDataFrame():
         combined_df = pd.concat([combined_df, df], ignore_index=True)
     return combined_df
 
+# Converts a string value to a float value
+# If a value is nan then store a NULL value
 def convertToFloatOrNull(list):
 
     try:
