@@ -11,7 +11,7 @@ This comprehensive project encompasses a range of functionalities, including web
 
 ## Overview
 
-- **Web Crawler**: An automated web crawler gathers stock market data from various sources and stores it in a database.
+- **Web Crawler**: An automated web crawler using AWS Lambda gathers stock market data from Yahoo Finance and stores it in an AWS S3 bucket.
 
 - **ChatGPT API**: The system integrates with the OpenAI ChatGPT API, allowing users to send queries and receive AI-generated responses.
 
