@@ -34,7 +34,7 @@ All the collected data is meticulously stored in CSV format within AWS S3 for ea
 
 The backend server is implemented using AWS EC2. When Lambda functions perform web crawling and save the data to an S3 bucket, this data is subsequently retrieved and stored within a MySQL database hosted on the EC2 instance. Furthermore, a web server has been established using Django to facilitate seamless interactions and serve the collected data. Also, the backend server functions as an intermediary between the client interface and the ChatGPT API. It is responsible for managing user requests, handling query processing, retrieving pertinent information from the database, communicating with the ChatGPT API to submit queries, and ultimately delivering responses back to the client
 
-### 2. ChatGPT API
+### 3. ChatGPT API
 
 This system leverages ChatGPT to enable users to easily obtain desired information through simple natural language queries. ChatGPT translates user questions into SQL queries, extracts data from the database tailored to the users' needs, and then presents the extracted data in a user-friendly format for user consumption.
 
@@ -43,5 +43,11 @@ This system leverages ChatGPT to enable users to easily obtain desired informati
 ### 1. More Lambda Functions For More Information
 The current system is capable of crawling stock information for 1,100 companies. However, by merely scaling up the number of Lambda functions for each sector, we can easily expand the coverage to include data for even more companies. The current approach employs three Lambda functions for each sector to retrieve stock information for the top 100 companies. Assuming this structure remains the same, to collect stock information for 11,000 companies, we would require a total of 330 Lambda functions.
 
-### User Interaction and Data Visualization
+### 2. Data Visualization With BI Tool
 The current format of ChatGPT responses visible to users is essentially text-based, resembling SQL query results. To enhance user convenience further, incorporating a Business Intelligence (BI) tool such as Power BI is essential. This integration would empower users to analyze the received data in various ways, providing a versatile toolkit for data exploration and interpretation.
+
+### 3. Fine Tuning For ChatGPT
+The current performance of the ChatGPT API for user interactions is suboptimal in terms of response time. Recently, with the introduction of Fine-tuning capabilities by OpenAI, it is now possible to train the model on anticipated user queries and responses. This holds the promise of achieving a significantly faster ChatGPT performance, which is highly anticipated.
+
+### 4. Diversity of Data
+Currently, the system only provides stock summaries for individual companies. However, diversifying the data can be achieved by incorporating historical data and company-related news into the crawling process. While the system currently relies solely on an RDBS, the inclusion of various data types such as company news necessitates the integration of a NoSQL database. This expansion would enable users to access a broader range of data resources easily
