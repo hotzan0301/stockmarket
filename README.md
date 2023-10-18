@@ -40,6 +40,8 @@ This system leverages ChatGPT to enable users to easily obtain desired informati
 
 ## Future Developments
 
-
-### 1. More Lambda functions for more information
+### 1. More Lambda Functions For More Information
 The current system is capable of crawling stock information for 1,100 companies. However, by merely scaling up the number of Lambda functions for each sector, we can easily expand the coverage to include data for even more companies. The current approach employs three Lambda functions for each sector to retrieve stock information for the top 100 companies. Assuming this structure remains the same, to collect stock information for 11,000 companies, we would require a total of 330 Lambda functions.
+
+### User Interaction and Data Visualization
+The current format of ChatGPT responses visible to users is essentially text-based, resembling SQL query results. To enhance user convenience further, incorporating a Business Intelligence (BI) tool such as Power BI is essential. This integration would empower users to analyze the received data in various ways, providing a versatile toolkit for data exploration and interpretation.
