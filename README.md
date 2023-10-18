@@ -1,16 +1,13 @@
 # Stock Market with ChatGpt
 
-There are many stock information websites and apps in the market, so accessing stock market information has become easier and faster than the past.
-Anyone can easily navigate websites like Yahoo Finance. However, when newcomers enter such websites, they might get stuck wondering where to start.
-For instance, just looking up information on well-known companies like Apple can be quite confusing.
-Even for experienced users, setting up to compare and anlayze stock information for various companies can be time-consuming.
+In today's market, there is an abundance of stock information websites and applications, making access to stock market data faster and more convenient than ever before. Navigating popular platforms such as Yahoo Finance has become a straightforward task for virtually anyone. Nevertheless, for newcomers, the initial entry into these websites can be quite overwhelming, as they grapple with the question of where to commence their exploration.
 
-Thanks to the advancement of natural language processing models like ChatGPT, we can see cases of improved user experiences applied in various fields.
-If ChatGPT were to be applied to a stock information app, it could potentially make it more user-friendly, allowing many people to find stock information
-more easily and quickly.
+For example, even experienced users may find it a time-consuming challenge to configure their settings for the comparative analysis of stock information across various companies. Fortunately, with the advancements in natural language processing models like ChatGPT, we are witnessing remarkable improvements in user experiences applied across diverse domains.
 
-This project encompasees web scraping, data storage, work scheduling and orcherstration, web server hosting and web application using AWS cloud service.
-Addtionally, a chat-based interface for users to interact with the stock information database using ChatGPT has been implemented.
+By envisioning the integration of ChatGPT into a stock information application, we have the potential to enhance its user-friendliness significantly. Such an implementation would empower a broader audience to effortlessly and expeditiously access the wealth of stock information available.
+
+This comprehensive project encompasses a range of functionalities, including web scraping, data storage, task scheduling, orchestration, web server hosting, and the development of web applications, all powered by AWS cloud services. Moreover, a chat-based interface has been skillfully incorporated to allow users to interact with the stock information database through ChatGPT.
+
 
 ## Overview
 
