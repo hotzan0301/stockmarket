@@ -23,7 +23,7 @@ This comprehensive project encompasses a range of functionalities, including web
 ## Components
 
 ### 1. Web Crawler
-For web crawling, we employed multiple Lambda functions to gather stock information. Specifically, we collected stock summary and company profiles for the top 100 companies in terms of market capitalization within each of the 11 sectors through Yahoo Finance. To expedite the process, we utilized a total of 33 Lambda functions, distributing them across the sectors, with three Lambda functions dedicated to each sector.
+For web crawling, we employed multiple Lambda functions to gather stock information. Specifically, we collected stock summary and company profiles for the top 100 companies in terms of market capitalization within each of the 11 sectors, total 1100 companies, through Yahoo Finance. To expedite the process, we utilized a total of 33 Lambda functions, distributing them across the sectors, with three Lambda functions dedicated to each sector.
 
 To maintain efficiency and timeliness, we implemented a scheduling system using Apache Airflow. This scheduling system enabled web crawling at 30-minute intervals, commencing at the opening of the U.S. stock market and concluding at its closure. The orchestration of these 33 Lambda functions was managed through AWS Step Functions.
 
@@ -38,6 +38,8 @@ The backend server is implemented using AWS EC2. When Lambda functions perform w
 
 This system leverages ChatGPT to enable users to easily obtain desired information through simple natural language queries. ChatGPT translates user questions into SQL queries, extracts data from the database tailored to the users' needs, and then presents the extracted data in a user-friendly format for user consumption.
 
+## Future Developments
 
 
-
+### 1. More Lambda functions for more information
+The current system is capable of crawling stock information for 1,100 companies. However, by merely scaling up the number of Lambda functions for each sector, we can easily expand the coverage to include data for even more companies. The current approach employs three Lambda functions for each sector to retrieve stock information for the top 100 companies. Assuming this structure remains the same, to collect stock information for 11,000 companies, we would require a total of 330 Lambda functions.
