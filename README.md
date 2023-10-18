@@ -1,4 +1,4 @@
-# Stock Market with ChatGpt
+# Stock Market with ChatGPT
 
 In today's market, there is an abundance of stock information websites and applications, making access to stock market data faster and more convenient than ever before. Navigating popular platforms such as Yahoo Finance has become a straightforward task for virtually anyone. Nevertheless, for newcomers, the initial entry into these websites can be quite overwhelming, as they grapple with the question of where to commence their exploration.
 
