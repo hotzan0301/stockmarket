@@ -2,7 +2,6 @@ import json
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import os
-import json
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -14,7 +13,7 @@ import boto3
 s3Bucket = 'NAME_OF_THE_S3_BUCKET'
 s3CsvFileToRead = 'CSV FILE IN S3 BUCKET'
 
-
+# Setting up a Chrome driver to run in Lambda environment
 def setUpChromeDriver():
     chrome_options = Options()
     chrome_options.add_argument('--headless')
@@ -41,7 +40,9 @@ def setUpChromeDriver():
     chrome_options.add_experimental_option("prefs", prefs)
     browser = webdriver.Chrome(chrome_options=chrome_options, executable_path='/opt/python/bin/chromedriver')
     return browser
-
+    
+# Get a company's stock summary through Yahoo Finance
+# Count is for retrying when an error occured.
 def getSummary(ticker, count):
     browser = setUpChromeDriver()
     summaryUrl = f"https://finance.yahoo.com/quote/{ticker}"
@@ -65,13 +66,14 @@ def getSummary(ticker, count):
         
     finally:
         browser.quit()
-
+# Write the data in CSV format and save it within the temp folder
 def writeCsvSummary(list):
      with open('/tmp/companySummaries.csv','a',newline='') as f:
             writer = csv.writer(f)
             writer.writerow(list)
 
-def read_urls():
+# Read company tickers from a CSV file in the S3 bucket
+def read_companies():
     s3 = boto3.resource('s3')
     csvFile = s3.Object(s3Bucket, s3CsvFileToRead)
     data = csvFile.get()['Body'].read().decode('utf-8').splitlines()
@@ -84,7 +86,7 @@ def lambda_handler(event, context):
     with open('/tmp/companySummaries.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
-    sectors = read_urls()
+    sectors = companies()
     count = 1
     for sector in sectors:
         print(count)
